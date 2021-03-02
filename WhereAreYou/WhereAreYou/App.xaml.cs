@@ -10,7 +10,8 @@ namespace WhereAreYou
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            // MainPage = new MainPage(); // This is only for single page applications
+            MainPage = new NavigationPage(new MainPage()); // Use this for multipage application, also state starting page
         }
 
         protected override void OnStart()

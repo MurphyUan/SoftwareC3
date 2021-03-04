@@ -15,6 +15,7 @@ namespace WhereAreYou
         public NextPage()
         {
             InitializeComponent();
+            //heyxx
         }
     }
 }

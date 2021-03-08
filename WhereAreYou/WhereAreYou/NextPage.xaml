@@ -9,4 +9,6 @@
                 HorizontalOptions="CenterAndExpand" />
         </StackLayout>
     </ContentPage.Content>
+    <Button x:Name="Btnresetpass" Text="Reset password" Clicked="Btnresetpass_Clicked"></Button>
+    
 </ContentPage>

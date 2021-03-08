@@ -10,20 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace WhereAreYou
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NextPage : ContentPage
+    public partial class Page1 : ContentPage
     {
-        public NextPage()
+        public Page1()
         {
             InitializeComponent();
-             
-        }
-
-        private void Btnresetpass_Clicked(object sender, EventArgs e)
-        {
-
-            Navigation.PushAsync(new Page1());
-
-
         }
     }
 }

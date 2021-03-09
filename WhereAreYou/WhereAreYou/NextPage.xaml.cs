@@ -39,6 +39,11 @@ namespace WhereAreYou
             await OpenWebPage("https://gmitsu.ie/");
         }
 
+        private async void GMITlibBtn_clicked(object sender, EventArgs e)
+        {
+            await OpenWebPage("https://library.gmit.ie/");
+        }
+
         //Used to Open any webpage externally, app will resume once webpage is closed.
         public async Task<bool> OpenWebPage(String URL)
         {

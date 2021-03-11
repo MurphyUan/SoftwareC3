@@ -16,5 +16,22 @@ namespace WhereAreYou
         {
             InitializeComponent();
         }
+
+        private void Reset_Clicked(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(newuserPass.Text) || (string.IsNullOrEmpty(newuserPass2.Text)))
+            {
+                LblInfoDisplay.Text = "---- Please check both entries ----";
+                LblInfoDisplay.IsVisible = true;
+                return;
+            }
+
+            // Navigates to next page once login successful
+            else
+            {
+                LblInfoDisplay.Text = "Password changed!";
+                LblInfoDisplay.IsVisible = true;
+            }
+        }
     }
 }

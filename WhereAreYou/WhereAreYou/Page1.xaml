@@ -12,7 +12,14 @@
             <StackLayout Orientation="Horizontal">
              <Entry x:Name="newuserPass2" IsPassword="True" Placeholder="Confirm new Password" HorizontalOptions="FillAndExpand"/>
             </StackLayout>
-
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="Reset" Text="Confirm your New password" Clicked="Reset_Clicked"></Button>
             </StackLayout>
+            <StackLayout Orientation="Horizontal">  
+            <Label x:Name="LblInfoDisplay" TextColor="Black" Text="Good Luck!" HorizontalTextAlignment="Center" />
+            </StackLayout>
+
+
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

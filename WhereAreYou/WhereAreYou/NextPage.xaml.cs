@@ -24,6 +24,9 @@ namespace WhereAreYou
             SUIBtn.Source =
             Device.RuntimePlatform == Device.Android ? ImageSource.FromFile("SUImage.jpg")
                                                      : ImageSource.FromFile("Images/SUImage.jpg");
+            GMITlibBtn.Source =
+            Device.RuntimePlatform == Device.Android ? ImageSource.FromFile("GMITLibrary.jfif")
+                                                     : ImageSource.FromFile("Images/GMITLibrary.jfif");
         }
 
         private void Btnresetpass_Clicked(object sender, EventArgs e)

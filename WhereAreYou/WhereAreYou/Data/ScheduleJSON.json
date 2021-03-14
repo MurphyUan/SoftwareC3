@@ -1,0 +1,10 @@
+﻿[
+  {"ModuleName": "Mobile Applications","RoomID": "1007","Day": "Tuesday","StartTime": "9.00","EndTime": "11.00"},
+  {"ModuleName": "Project Management","RoomID": "1011","Day": "Tuesday","StartTime": "11.00","EndTime": "13.00"},
+  {"ModuleName": "Data Structures","RoomID": "1012","Day": "Tuesday","StartTime": "14.00","EndTime": "17.00"},
+  {"ModuleName": "Applied Networking","RoomID": "1009","Day": "Wednesday","StartTime": "9.00","EndTime": "13.00"},
+  {"ModuleName": "Mobile Applications","RoomID": "1007","Day": "Wednesday","StartTime": "14.00","EndTime": "16.00"},
+  {"ModuleName": "Advanced Procedural Programming","RoomID": "1010","Day": "Thursday","StartTime": "10.00","EndTime": "13.00"},
+  {"ModuleName": "Project Management","RoomID": "1011","Day": "Thursday","StartTime": "14.00","EndTime": "17.00"},
+  {"ModuleName": "Database Management","RoomID": "1013","Day": "Friday","StartTime": "9.00","EndTime": "13.00"}
+]

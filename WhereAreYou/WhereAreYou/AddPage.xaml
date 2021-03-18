@@ -4,9 +4,36 @@
              x:Class="WhereAreYou.AddPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Add Page!!!" FontSize="Header"
+                VerticalOptions="Start" 
+                HorizontalOptions="Center" />
+            <StackLayout>
+                <StackLayout x:Name="MNSL" VerticalOptions="Center">
+                    <Label x:Name="MNLbl" Text="Module Name:"/>
+                    <Entry x:Name="MNEntry"/>
+                </StackLayout>
+                <StackLayout x:Name="RIDSL" VerticalOptions="Center">
+                    <Label x:Name="RIDLbl" Text="Room Identification Number:"/>
+                    <Entry x:Name="RIDEntry"/>
+                </StackLayout>
+                <StackLayout x:Name="DSL" VerticalOptions="Center">
+                    <Label x:Name="DLbl" Text="Day:"/>
+                    <Picker x:Name="DPick"/>
+                </StackLayout>
+                <StackLayout x:Name="STSL" VerticalOptions="Center">
+                    <Label x:Name="STLbl" Text="Start Time:"/>
+                    <Entry x:Name="STEntry"/>
+                </StackLayout>
+                <StackLayout x:Name="ETSL" VerticalOptions="Center">
+                    <Label x:Name="ETLbl" Text="End Time:"/>
+                    <Entry x:Name="ETEntry"/>
+                </StackLayout>
+                <StackLayout x:Name="PushSL" Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button x:Name="PushBtn" Text="Add" Clicked="PushBtn_Clicked"/>
+                    <Button x:Name="ClearBtn" Text="Clear" Clicked="ClearBtn_Clicked"/>
+                    <Button x:Name="ExitBtn" Text="Exit" Clicked="ExitBtn_Clicked"/>
+                </StackLayout>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

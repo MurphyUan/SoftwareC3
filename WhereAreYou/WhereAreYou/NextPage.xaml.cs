@@ -13,6 +13,8 @@ namespace WhereAreYou
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NextPage : ContentPage
     {
+        public const string filename = "Schedule.json";
+
         public NextPage()
         {
             InitializeComponent();

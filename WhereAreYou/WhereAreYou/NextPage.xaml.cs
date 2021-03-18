@@ -54,5 +54,10 @@ namespace WhereAreYou
             if (!canOpen) await DisplayAlert("Error", "Could not open webpage", "OK");
             return canOpen;
         }
+
+        private void AddPageButton_Clicked(object sender, EventArgs e)
+        {
+            //Open Add Page
+        }
     }
 }

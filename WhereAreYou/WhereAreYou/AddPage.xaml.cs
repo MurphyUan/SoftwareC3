@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace WhereAreYou
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AppPage : ContentPage
+    public partial class AddPage : ContentPage
     {
-        public AppPage()
+        public AddPage()
         {
             InitializeComponent();
         }

@@ -17,9 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="AddPage.xaml.cs">
-      <DependentUpon>AddPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Page1.xaml.cs">
       <DependentUpon>Page1.xaml</DependentUpon>
     </Compile>

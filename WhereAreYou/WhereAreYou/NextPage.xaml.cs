@@ -58,6 +58,7 @@ namespace WhereAreYou
         private void AddPageButton_Clicked(object sender, EventArgs e)
         {
             //Open Add Page
+            Navigation.PushAsync(new AddPage());
         }
     }
 }

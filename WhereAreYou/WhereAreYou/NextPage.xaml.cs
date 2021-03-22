@@ -62,5 +62,11 @@ namespace WhereAreYou
             //Open Add Page
             Navigation.PushAsync(new AddPage());
         }
+
+        private void EditPage_Clicked(object sender, EventArgs e)
+        {
+            //Open Add Page
+            Navigation.PushAsync(new EditPage());
+        }
     }
 }

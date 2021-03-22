@@ -11,7 +11,7 @@ namespace WhereAreYou
 {
     public class Utils
     {
-        const string DEFAULT_FILE = "WhereAreYou.Data.ScheduleJSON.json";
+        public const string DEFAULT_FILE = "WhereAreYou.Data.ScheduleJSON.json";
 
         public static List<Schedule> ReadListOfData(string filename)
         {

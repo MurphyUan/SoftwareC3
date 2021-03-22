@@ -19,7 +19,7 @@ namespace WhereAreYou
 
            
 
-            schedules = Utils.ReadListOfData(NextPage.filename);
+            schedules = Utils.ReadListOfData(App.filename);
         }
     }
 }

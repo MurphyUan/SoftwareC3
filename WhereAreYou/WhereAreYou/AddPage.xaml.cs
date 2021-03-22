@@ -27,7 +27,7 @@ namespace WhereAreYou
 
             DPick.ItemsSource = DayList;
 
-            schedules = Utils.ReadListOfData(NextPage.filename);
+            schedules = Utils.ReadListOfData(App.filename);
         }
 
         private void PushBtn_Clicked(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace WhereAreYou
             schedule.EndTime = float.Parse(ETEntry.Text);
 
             schedules.Add(schedule);
-            Utils.SaveListOfData(NextPage.filename,schedules);
+            Utils.SaveListOfData(App.filename,schedules);
         }
 
         private void ClearBtn_Clicked(object sender, EventArgs e)

@@ -10,6 +10,51 @@
         </StackLayout>
     </ContentPage.Content>
     <StackLayout>
+        
+        <!-- Drop down menues -->
+        <Picker x:Name="pckCourse" Title="Which Course?" HorizontalOptions="CenterAndExpand" SelectedIndexChanged="pckCourse_SelectedIndexChanged">
+            <Picker.Items>
+                <x:String>Software Development</x:String>
+                <x:String>Digital Media</x:String>
+            </Picker.Items>
+        </Picker>
+        <Picker x:Name="pckGroup" Title="Which Group?" HorizontalOptions="CenterAndExpand" SelectedIndexChanged="pckGroup_SelectedIndexChanged">
+            <Picker.Items>
+                <x:String>A</x:String>
+                <x:String>B</x:String>
+                <x:String>C</x:String>
+            </Picker.Items>
+        </Picker>
+        <Picker x:Name="pckDay" Title="What Day?" HorizontalOptions="CenterAndExpand" SelectedIndexChanged="pckDay_SelectedIndexChanged_1">
+            <Picker.Items>
+                <x:String>Mon</x:String>
+                <x:String>Tue</x:String>
+                <x:String>Wed</x:String>
+                <x:String>Thur</x:String>
+                <x:String>Fri</x:String>
+            </Picker.Items>
+        </Picker>
+        <Picker x:Name="pckTime" Title="What Time?" HorizontalOptions="CenterAndExpand" SelectedIndexChanged="pckTime_SelectedIndexChanged">
+            <Picker.Items>
+                <x:String>9am</x:String>
+                <x:String>10am</x:String>
+                <x:String>11am</x:String>
+                <x:String>12pm</x:String>
+                <x:String>1pm</x:String>
+                <x:String>2pm</x:String>
+                <x:String>3pm</x:String>
+                <x:String>4pm</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <!-- Where are you button -->
+        <Button x:Name="BtnWAY" Text="WHERE ARE YOU?!" Padding="0,30,0,30" Clicked="BtnWAY_Clicked"></Button>
+
+        <!-- Section on the GUI to advise user on where to go etc -->
+        <Label x:Name="LblDisplayRoom" Text="You are in room: " HorizontalTextAlignment="Center" />
+        <Label x:Name="LblDisplayTime" Text="At this time: " HorizontalTextAlignment="Center" />
+        <Label x:Name="LblDisplayLecture" Text="For this lecture: " HorizontalTextAlignment="Center" />
+        
         <Button x:Name="Btnresetpass" Text="Reset password" Clicked="Btnresetpass_Clicked"></Button>
         <Button x:Name="AddPageButton" Text="Add new TimeSlot" Clicked="AddPageButton_Clicked"></Button>
         <Button x:Name="EditPage" Text="Edit a timeslot" Clicked="EditPage_Clicked"></Button>

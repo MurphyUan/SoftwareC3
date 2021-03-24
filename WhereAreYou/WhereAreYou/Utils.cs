@@ -5,9 +5,6 @@ using System.Text;
 using System.IO;
 using System.Reflection;
 using Newtonsoft.Json;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using WhereAreYou;
 
 namespace WhereAreYou
 {
@@ -29,8 +26,8 @@ namespace WhereAreYou
             }
             catch (Exception)
             {
-                var assemly = IntrospectionExtensions.GetTypeInfo(typeof(MainPage)).Assembly;
-                Stream stream = assemly.GetManifestResourceStream(DEFAULT_FILE);
+                var assembly = IntrospectionExtensions.GetTypeInfo(typeof(MainPage)).Assembly;
+                Stream stream = assembly.GetManifestResourceStream(DEFAULT_FILE);
                 using (var reader = new StreamReader(stream)) jsonText = reader.ReadToEnd(); // This is crashing the app for me (DM)
             }
 

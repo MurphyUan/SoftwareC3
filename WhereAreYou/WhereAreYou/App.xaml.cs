@@ -23,19 +23,10 @@ namespace WhereAreYou
             // ********** I had to comment out the below, It really doesn't like ln 32 in Utils.cs, I also didn't want to mess wit your stuff here ***************
 
             //Check if Schedules Exist if not create file using the Default_File
-            /*
-            try
-            {
 
-                Schedules = Utils.ReadListOfData(filename);
+            
 
-            }catch (Exception){
-
-                Schedules = Utils.ReadListOfData(Utils.DEFAULT_FILE);
-                Utils.SaveListOfData(filename, Schedules);
-
-            }
-            */
+            Utils.SaveListOfData(Utils.DEFAULT_FILE, Schedules);
         }
 
         protected override void OnSleep()

@@ -1,10 +1,75 @@
 ﻿[
-  {"Course": "Software Development","Group": "All","ModuleName": "Mobile Applications","RoomID": "1007","Day": 2,"StartTime": "9.00","EndTime": "11.00"},
-  {"Course": "Software Development","Group": "All","ModuleName": "Project Management","RoomID": "1011","Day": 2,"StartTime": "11.00","EndTime": "13.00"},
-  {"Course": "Software Development","Group": "All","ModuleName": "Data Structures","RoomID": "1012","Day": 2,"StartTime": "14.00","EndTime": "17.00"},
-  {"Course": "Software Development","Group": "All","ModuleName": "Applied Networking","RoomID": "1009","Day": 3,"StartTime": "9.00","EndTime": "13.00"},
-  {"Course": "Software Development","Group": "All","ModuleName": "Mobile Applications","RoomID": "1007","Day": 3,"StartTime": "14.00","EndTime": "16.00"},
-  {"Course": "Software Development","Group": "All","ModuleName": "Advanced Procedural Programming","RoomID": "1010","Day": 4,"StartTime": "10.00","EndTime": "13.00"},
-  {"Course": "Software Development","Group": "All","ModuleName": "Project Management","RoomID": "1011","Day": 4,"StartTime": "14.00","EndTime": "17.00"},
-  {"Course": "Software Development","Group": "All","ModuleName": "Database Management","RoomID": "1013","Day": 5,"StartTime": "9.00","EndTime": "13.00"}
+  {
+    "Course": "Software Development",
+    "Group": "Software Development",
+    "ModuleName": "Mobile Apllications",
+    "RoomID": "1012",
+    "Day": 2,
+    "StartTime": 9.0,
+    "EndTime": 1.0
+  },
+  {
+    "Course": "Software Development",
+    "Group": "Software Development",
+    "ModuleName": "Mobile Apllications",
+    "RoomID": "1012",
+    "Day": 3,
+    "StartTime": 2.0,
+    "EndTime": 4.0
+  },
+  {
+    "Course": "Software Development",
+    "Group": "Software Development",
+    "ModuleName": "Project Management",
+    "RoomID": "1013",
+    "Day": 2,
+    "StartTime": 11.0,
+    "EndTime": 13.0
+  },
+  {
+    "Course": "Software Development",
+    "Group": "Software Development",
+    "ModuleName": "Project Management",
+    "RoomID": "1013",
+    "Day": 4,
+    "StartTime": 16.0,
+    "EndTime": 17.0
+  },
+  {
+    "Course": "Software Development",
+    "Group": "Software Development",
+    "ModuleName": "Data Structures",
+    "RoomID": "1013",
+    "Day": 2,
+    "StartTime": 14.0,
+    "EndTime": 17.0
+  },
+  {
+    "Course": "Software Development",
+    "Group": "Software Development",
+    "ModuleName": "Applied Networking 2",
+    "RoomID": "1014",
+    "Day": 3,
+    "StartTime": 9.0,
+    "EndTime": 13.0
+  },
+  {
+    "Course": "Software Development",
+    "Group": "Software Development",
+    "ModuleName": "Advanced Procedural Programming",
+    "RoomID": "1015",
+    "Day": 4,
+    "StartTime": 10.0,
+    "EndTime": 13.0
+  },
+  {
+    "Course": "Software Development",
+    "Group": "Software Development",
+    "ModuleName": "Databases",
+    "RoomID": "1016",
+    "Day": 4,
+    "StartTime": 9.0,
+    "EndTime": 13.0
+  }
 ]
+

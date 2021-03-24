@@ -26,7 +26,7 @@ namespace WhereAreYou
                 return;
             }
 
-            // Navigates to next page once login successful
+            // Navigates to next page once login successful.
             else
             {
                 Navigation.PushAsync(new NextPage());

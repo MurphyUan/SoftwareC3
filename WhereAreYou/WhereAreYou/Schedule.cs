@@ -10,15 +10,38 @@ namespace WhereAreYou
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
+        private string course;
+        private string group;
         private string moduleName;
         private string roomID;
-        private string day;
+        private int day;
         private float starttime;
         private float endtime;
 
         public Schedule()
         {
 
+        }
+        public string Course
+        {
+            get { return course; }
+            set
+            {
+                if (course == value) return;
+                course = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string Group
+        {
+            get { return course; }
+            set
+            {
+                if (group == value) return;
+                group = value;
+                OnPropertyChanged();
+            }
         }
 
         public string ModuleName
@@ -43,7 +66,7 @@ namespace WhereAreYou
             }
         }
 
-        public string Day
+        public int Day
         {
             get { return day; }
             set

@@ -17,13 +17,13 @@ namespace WhereAreYou
         {
             InitializeComponent();
 
-            List<string> DayList = new List<string>();
+            List<string> DayList = new List<string>() { "Monday","Tuesday","Wednesday","Thursday","Friday"};
 
-            DayList.Add("Monday");
-            DayList.Add("Tuesday");
-            DayList.Add("Wednesday");
-            DayList.Add("Thursday");
-            DayList.Add("Friday");
+            //DayList.Add("Monday");
+            //DayList.Add("Tuesday");
+            //DayList.Add("Wednesday");
+            //DayList.Add("Thursday");
+            //DayList.Add("Friday");
 
             DPick.ItemsSource = DayList;
 
@@ -33,9 +33,11 @@ namespace WhereAreYou
         private void PushBtn_Clicked(object sender, EventArgs e)
         {
             Schedule schedule = new Schedule();
+            schedule.Course = CEntry.Text;
+            schedule.Group = GEntry.Text;
             schedule.ModuleName = MNEntry.Text;
             schedule.RoomID = RIDEntry.Text;
-            schedule.Day = DPick.ItemsSource[DPick.SelectedIndex]+"";
+            schedule.Day = DPick.SelectedIndex + 1;
             schedule.StartTime = float.Parse(STEntry.Text);
             schedule.EndTime = float.Parse(ETEntry.Text);
 

@@ -197,6 +197,8 @@ namespace WhereAreYou
             LblDisplayRoom.Text = "You are in room: 101 *EXAMPLE"; // LblDisplayRoom.Text = "You are in room: " + _whatRoom;
             LblDisplayTime.Text = "At this time: 4pm - 5pm *EXAMPLE"; // LblDisplayTime.Text = "At this time: " + _whatTime;
             LblDisplayLecture.Text = "For this lecture: Project Mgmt *EXAMPLE"; //  LblDisplayLecture.Text = "For this lecture: " + _whatLecture;
+
+
         }
     }
     

@@ -5,6 +5,8 @@ using System.Text;
 using System.IO;
 using System.Reflection;
 using Newtonsoft.Json;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 using WhereAreYou;
 
 namespace WhereAreYou
@@ -46,6 +48,5 @@ namespace WhereAreYou
                 writer.WriteLine(jsonText);
             }
         }
-        
     }
 }

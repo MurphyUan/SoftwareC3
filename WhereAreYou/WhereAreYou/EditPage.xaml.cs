@@ -17,9 +17,12 @@ namespace WhereAreYou
         {
             InitializeComponent();
 
-           
+            List<string> DayList = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday" };
+
+
 
             schedules = Utils.ReadListOfData(App.filename);
         }
     }
+
 }

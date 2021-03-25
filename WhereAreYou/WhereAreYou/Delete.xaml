@@ -8,20 +8,24 @@
                 <Label x:Name="CLbl" Text="Course:"/>
                 <Entry x:Name="CEntry"/>
             </StackLayout>
+            <Picker x:Name="pckDay" Title="What Day?" HorizontalOptions="CenterAndExpand" SelectedIndexChanged="pckDay_SelectedIndexChanged">
+                <Picker.Items>
+                    <x:String>Mon</x:String>
+                    <x:String>Tue</x:String>
+                    <x:String>Wed</x:String>
+                    <x:String>Thur</x:String>
+                    <x:String>Fri</x:String>
+                </Picker.Items>
+             </Picker>
 
-            <StackLayout x:Name="G">
-                <Label x:Name="GLbl" Text="Group:"/>
-                <Entry x:Name="GEntry"/>
-            </StackLayout>
-            <StackLayout x:Name="DSL" VerticalOptions="Center">
-                <Label x:Name="DLbl" Text="Day:(*1-5  Monday=1,Tuesday=2.....)"/>
-                <Entry x:Name="DPick"/>
-            </StackLayout>
             <StackLayout x:Name="STSL" VerticalOptions="Center">
                 <Label x:Name="STLbl" Text="Start Time:"/>
                 <Entry x:Name="STEntry"/>
+               </StackLayout>
+            <StackLayout>
+                <Button x:Name="Deletedata" Text="Delete" Clicked"Deletedata_Clicked"></Button>
             </StackLayout>
-
+            
 
         </StackLayout>
        

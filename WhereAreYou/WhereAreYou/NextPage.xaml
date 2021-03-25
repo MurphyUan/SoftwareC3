@@ -58,6 +58,7 @@
         <Button x:Name="Btnresetpass" Text="Reset password" Clicked="Btnresetpass_Clicked"></Button>
         <Button x:Name="AddPageButton" Text="Add new TimeSlot" Clicked="AddPageButton_Clicked"></Button>
         <Button x:Name="EditPage" Text="Edit a timeslot" Clicked="EditPage_Clicked"></Button>
+        <Button x:Name="DeletePage" Text="Delete a timeslot" Clicked="DeletePage_Clicked"></Button>
         <ImageButton x:Name="SUIBtn" Clicked="SUIBtn_Clicked"
                      VerticalOptions="Center" HorizontalOptions="CenterAndExpand"></ImageButton>
         <ImageButton x:Name="GMITlibBtn" Clicked="GMITlibBtn_clicked"

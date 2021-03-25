@@ -29,6 +29,9 @@
     <EmbeddedResource Update="AddPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Delete.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="NextPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

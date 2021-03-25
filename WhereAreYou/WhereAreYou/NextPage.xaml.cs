@@ -200,6 +200,11 @@ namespace WhereAreYou
 
 
         }
+
+        private void DeletePage_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Delete());
+        }
     }
     
 }

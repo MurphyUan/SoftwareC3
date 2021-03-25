@@ -35,7 +35,7 @@ namespace WhereAreYou
 
         public string Group
         {
-            get { return course; }
+            get { return group; }
             set
             {
                 if (group == value) return;

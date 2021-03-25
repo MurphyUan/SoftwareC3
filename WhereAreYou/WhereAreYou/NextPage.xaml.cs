@@ -14,15 +14,17 @@ namespace WhereAreYou
     public partial class NextPage : ContentPage
     {
         // Global variables
-        char _userCourse; // 'S' - Software , 'D' - Digital Media
-        char _userGroup; // A , B , C 
+        string _userCourse; // 'S' - Software , 'D' - Digital Media
+        string _userGroup; // A , B , C 
         int _userDay; // 1 - Monday , 2 - Tuesday , 3 - Wednesday, 4 = Thursday, 5 - Friday
-        int _userTime; // 9 - 9am, 10 - 10am ........ 4 - 4pm
+        float _userTime; // 9 - 9am, 10 - 10am ........ 4 - 4pm
 
         // These variables to be initialised 
         string _whatRoom;
         string _whatLecture;
         string _whatTime;
+
+        List<Schedule> schedules = new List<Schedule>();
 
         public NextPage()
         {
@@ -38,14 +40,12 @@ namespace WhereAreYou
             GMITlibBtn.Source =
             Device.RuntimePlatform == Device.Android ? ImageSource.FromFile("GMITLibrary.jfif")
                                                      : ImageSource.FromFile("Images/GMITLibrary.jfif");
+            schedules = Utils.ReadListOfData(App.filename);
         }
 
         private void Btnresetpass_Clicked(object sender, EventArgs e)
         {
-
             Navigation.PushAsync(new Page1());
-
-
         }
 
         private async void SUIBtn_Clicked(object sender, EventArgs e)
@@ -85,10 +85,10 @@ namespace WhereAreYou
 
             if (courseIndex == 0)
             {
-                _userGroup = 'S';
+                _userCourse = "Software Development";
             }
             else{
-                _userCourse = 'D';
+                _userCourse = "Digital Media";
             }   
         }
 
@@ -98,34 +98,19 @@ namespace WhereAreYou
 
             if (groupIndex == 0)
             {
-                _userCourse = 'A';
+                _userGroup = "A";
             }
             else if (groupIndex == 1)
             {
-                _userCourse = 'B';
+                _userGroup = "B";
             }
-            else {
-                _userCourse = 'C';
+            else if (groupIndex == 2)
+            {
+                _userGroup = "C";
             }
+            else _userGroup = "All";
         }
 
-        private void pckDay_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int dayIndex = ((Picker)sender).SelectedIndex;
-
-            if (dayIndex == 0)
-            {
-                _userCourse = 'A';
-            }
-            else if (dayIndex == 1)
-            {
-                _userCourse = 'B';
-            }
-            else
-            {
-                _userCourse = 'C';
-            }
-        }
 
         private void pckTime_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -149,23 +134,23 @@ namespace WhereAreYou
             }
             else if (timeIndex == 4)
             {
-                _userTime = 1;
+                _userTime = 13;
             }
             else if (timeIndex == 5)
             {
-                _userTime = 2;
+                _userTime = 14;
             }
             else if (timeIndex == 6)
             {
-                _userTime = 3;
+                _userTime = 15;
             }
-            else
+            else if (timeIndex == 7)
             {
-                _userTime = 4;
+                _userTime = 16;
             }
         }
 
-        private void pckDay_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void pckDay_SelectedIndexChanged(object sender, EventArgs e)
         {
             int dayIndex = ((Picker)sender).SelectedIndex;
 
@@ -194,11 +179,30 @@ namespace WhereAreYou
         // Once the "WAY" button is pressed, the labels will update.
         private void BtnWAY_Clicked(object sender, EventArgs e)
         {
-            LblDisplayRoom.Text = "You are in room: 101 *EXAMPLE"; // LblDisplayRoom.Text = "You are in room: " + _whatRoom;
-            LblDisplayTime.Text = "At this time: 4pm - 5pm *EXAMPLE"; // LblDisplayTime.Text = "At this time: " + _whatTime;
-            LblDisplayLecture.Text = "For this lecture: Project Mgmt *EXAMPLE"; //  LblDisplayLecture.Text = "For this lecture: " + _whatLecture;
+            
+            Schedule schedule = new Schedule();
+            Schedule schedule1 = new Schedule();
+
+            for (int x = 0; x < schedules.Count();x++)
+            {
+                if (schedules[x].Day == pckDay.SelectedIndex + 1 &&
+                    schedules[x].Course == _userCourse &&
+                    schedules[x].Group == _userGroup &&
+                    (schedules[x].StartTime <= _userTime && schedules[x].EndTime > _userTime))
+                {
+                    schedule1 = schedule;
+                }
+            }
 
 
+
+            //LblDisplayRoom.Text = "You are in room: 101 *EXAMPLE"; // LblDisplayRoom.Text = "You are in room: " + _whatRoom;
+            //LblDisplayTime.Text = "At this time: 4pm - 5pm *EXAMPLE"; // LblDisplayTime.Text = "At this time: " + _whatTime;
+            //LblDisplayLecture.Text = "For this lecture: Project Mgmt *EXAMPLE"; //  LblDisplayLecture.Text = "For this lecture: " + _whatLecture;
+
+            LblDisplayRoom.Text = "You Are In Room: "+schedule1.RoomID;
+            LblDisplayTime.Text = "At This Time: " + schedule1.StartTime + " - " + schedule1.EndTime;
+            LblDisplayLecture.Text = "For This Lecture: " + schedule1.ModuleName;
         }
 
         private void DeletePage_Clicked(object sender, EventArgs e)

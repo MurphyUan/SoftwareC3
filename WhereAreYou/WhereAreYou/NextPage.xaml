@@ -23,9 +23,10 @@
                 <x:String>A</x:String>
                 <x:String>B</x:String>
                 <x:String>C</x:String>
+                <x:String>All</x:String>
             </Picker.Items>
         </Picker>
-        <Picker x:Name="pckDay" Title="What Day?" HorizontalOptions="CenterAndExpand" SelectedIndexChanged="pckDay_SelectedIndexChanged_1">
+        <Picker x:Name="pckDay" Title="What Day?" HorizontalOptions="CenterAndExpand" SelectedIndexChanged="pckDay_SelectedIndexChanged">
             <Picker.Items>
                 <x:String>Mon</x:String>
                 <x:String>Tue</x:String>

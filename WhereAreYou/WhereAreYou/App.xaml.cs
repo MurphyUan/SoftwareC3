@@ -26,7 +26,7 @@ namespace WhereAreYou
 
             
 
-            Utils.SaveListOfData(Utils.DEFAULT_FILE, Schedules);
+            Utils.SaveListOfData(filename, Schedules);
         }
 
         protected override void OnSleep()

@@ -24,9 +24,15 @@ namespace WhereAreYou
 
             //Check if Schedules Exist if not create file using the Default_File
 
+            try
+            {
+                Utils.ReadListOfData(filename);
+            }
+            catch(Exception)
+            {
+                Utils.SaveListOfData(filename, Schedules);
+            }
             
-
-            Utils.SaveListOfData(filename, Schedules);
         }
 
         protected override void OnSleep()

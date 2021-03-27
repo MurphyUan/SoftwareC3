@@ -16,16 +16,18 @@ namespace WhereAreYou
         
         public static List<Schedule> ReadListOfData(string filename)
         {
-            string jsonText = "";
+            string jsonText;
             
             try
             {
-                string path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
-                string fname = Path.Combine(path, filename);
-                using (var reader = new StreamReader(fname)) jsonText = reader.ReadToEnd();
+                using (var reader = new StreamReader($"./Data/{filename}"))
+                {
+                    jsonText = reader.ReadToEnd();
+                }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine(ex);
                 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(MainPage)).Assembly;
                 Stream stream = assembly.GetManifestResourceStream(DEFAULT_FILE);
                 using (var reader = new StreamReader(stream)) jsonText = reader.ReadToEnd(); // This is crashing the app for me (DM)

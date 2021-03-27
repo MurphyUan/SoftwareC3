@@ -8,6 +8,7 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <StackLayout>
+                <!-- search items --><!--
                 <StackLayout x:Name="CSL" VerticalOptions="Center">
                     <Label x:Name="CLbl" Text="Course:"/>
                     <Entry x:Name="CEntry"/>
@@ -15,13 +16,29 @@
                 <StackLayout x:Name="DSL" VerticalOptions="Center">
                     <Label x:Name="DLbl" Text="Day:"/>
                     <Picker x:Name="DPick"/>
+                    <Entry x:Name="DEntry"/>
                 </StackLayout>
                 <StackLayout x:Name="STSL" VerticalOptions="Center">
                     <Label x:Name="STLbl" Text="Start Time:"/>
                     <Entry x:Name="STEntry"/>
                 </StackLayout>
+                
+                --><!-- Make Changes button --><!--
+                <Button x:Name="EditBtn" Text="Append Timetable" Padding="0,30,0,30" Clicked="EditBtn_Clicked"></Button>-->
 
-              
+                <Picker x:Name="pckCourse" Title="Which Course?" HorizontalOptions="CenterAndExpand" ItemsSource="{Binding uniqueCourses}"/>
+                <Picker x:Name="pckDay" Title="Which Day?" HorizontalOptions="CenterAndExpand" ItemsSource="{Binding uniqueDays}"/>
+                <Picker x:Name="pckStartTime" Title="What Start Time?" HorizontalOptions="CenterAndExpand" ItemsSource="{Binding uniqueStartTimes}"/>
+
+                <Button x:Name="BtnSearch" Text="Search" Padding="0,30,0,30" Clicked="BtnSearch_Clicked" ></Button>
+
+                <Entry></Entry>
+                <Entry></Entry>
+                <Entry></Entry>
+                <Entry></Entry>
+
+                <Button x:Name="BtnSave" Text="Save" Padding="0,30,0,30" Clicked="BtnSave_Clicked" ></Button>
+
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

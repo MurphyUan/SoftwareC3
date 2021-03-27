@@ -59,7 +59,7 @@ namespace WhereAreYou
 
         }
 
-        public void EditBtn_Clicked(object sender, EventArgs e)
+        public void BtnSave_Clicked(object sender, EventArgs e)
         {
             //Schedule schedule = new Schedule();
             //Schedule schedule1 = new Schedule();
